@@ -1,21 +1,21 @@
 import React, { FC } from 'react';
 import Dialog from '@mui/material/Dialog';
-import { location } from '../data/location';
-// import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import Info from './info';
+import Info from './info_new';
 import Paper from '@mui/material/Paper';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import { point } from '../data/point';
 
-const CloseIcon = () => (
+/* const CloseIcon = () => (
   <span className="DeMo" style={{ color: '#cd0119', fontSize: '2rem' }}>
     K
   </span>
-);
+); */
 const Detail: FC<{
-  props: location;
+  props: point;
   open: boolean;
   closeModal: () => void;
 }> = ({ props, open, closeModal }) => {
@@ -25,7 +25,7 @@ const Detail: FC<{
     <Dialog
       PaperProps={{
         sx: {
-          width: fullScreen ? '100%' : '50%',
+          width: fullScreen ? '100%' : '60%',
           maxHeight: fullScreen ? '100%' : '80vh',
         },
       }}
@@ -35,12 +35,12 @@ const Detail: FC<{
       maxWidth={'md'}
       fullScreen={fullScreen}
     >
-      <Info loc={props} />
+      <Info pt={props} />
 
       {fullScreen && (
         <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
           <BottomNavigation onChange={closeModal}>
-            <BottomNavigationAction icon={<CloseIcon />} />
+            <BottomNavigationAction icon={<CloseRoundedIcon />} />
             {/* <BottomNavigationAction label="Recents" icon={<CloseRoundedIcon color="error" />} /> */}
           </BottomNavigation>
         </Paper>

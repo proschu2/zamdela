@@ -1,14 +1,13 @@
-import { Map, Overlay } from 'pigeon-maps';
-import React, { useState, useEffect } from 'react';
-import data from '../data/locations.json';
+import { Map as PigMap, Overlay } from 'pigeon-maps';
+import React, { useState } from 'react';
+import data from '../data/points.json';
 import Detail from './detail';
 import useWindowDimensions from '../hooks/useWindowDimensions';
-import { location } from '../data/location';
+import { point } from '../data/point';
 import { Outlet, useParams } from 'react-router-dom';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import { getDay } from '../utils/concert';
-import Tour from './tour';
+import Title from './title';
 
 import { maptiler, osm } from 'pigeon-maps/providers';
 
@@ -16,7 +15,7 @@ const provider =
   import.meta.env.VITE_MAPTILER_API_KEY && import.meta.env.VITE_GRAY === 'true'
     ? maptiler(import.meta.env.VITE_MAPTILER_API_KEY, 'basic-v2-light')
     : osm;
-const initialCenter: [number, number] = [48.4033409828109, 11.76927756103885];
+const initialCenter: [number, number] = [-26.854678486604453, 27.866108428558796];
 const PitMap = () => {
   // use id (optional) parameters to select a specific day
   const { id } = useParams();
@@ -25,7 +24,7 @@ const PitMap = () => {
   const { height, width } = useWindowDimensions();
 
   // define initial zoom
-  const initialZoom = useMediaQuery(useTheme().breakpoints.down('sm')) ? 5 : 6;
+  const initialZoom = useMediaQuery(useTheme().breakpoints.down('sm')) ? 12 : 13;
 
   // define initial center and zoom (and functions to change them)
   const [center, setCenter] = useState<[number, number]>(initialCenter);
@@ -40,17 +39,17 @@ const PitMap = () => {
 
   // variables and functions to update status and content of the modal
   const [open, setOpen] = useState<boolean>(false);
-  const [location, setLocation] = useState<location>();
+  const [point, setPoint] = useState<point>();
 
   // variable and function to update the size of the placeholders
-  const [pinSize, setPinSize] = useState<string>('40');
+  const [pinSize, setPinSize] = useState<string>('30');
   const updatePinSize = (zoom: number): void => {
     if (zoom >= 6) {
-      setPinSize('60');
-    } else if (zoom === 5) {
       setPinSize('40');
+    } else if (zoom === 5) {
+      setPinSize('30');
     } else {
-      setPinSize('25');
+      setPinSize('15');
     }
   };
 
@@ -61,32 +60,32 @@ const PitMap = () => {
   };
 
   // function to define the location used by modal
-  const defineLocation = (loc: location) => {
-    setCenter([loc.lat, loc.lon]);
+  const defineLocation = (pt: point) => {
+    setCenter([pt.lat, pt.lon]);
     //setZoom(8);
-    setLocation(loc);
+    setPoint(pt);
     setOpen(!open);
   };
 
   // effect that is used to check if an id is there, in case set the location
-  useEffect(() => {
+  /*   useEffect(() => {
     if (typeof id !== 'undefined') {
-      const loc = getDay(id);
-      defineLocation(loc);
+      const pt = getDay(id);
+      defineLocation(pt);
     }
-  }, [id]);
+  }, [id]); */
 
   return (
     <>
-      {!open && <Tour />}
+      {!open && <Title />}
       <div className="map">
-        <Map
+        <PigMap
           provider={provider}
           height={height}
           width={width}
           center={center}
           zoom={zoom}
-          minZoom={5}
+          minZoom={8}
           onClick={resetMap}
           onBoundsChanged={({ center, zoom }) => {
             updatePinSize(zoom);
@@ -96,27 +95,25 @@ const PitMap = () => {
         >
           <Outlet />
           {data &&
-            data
-              .filter((l) => l.date !== '*')
-              .map((loc) => {
-                return (
-                  <Overlay className="whiterose" key={loc.id} anchor={[loc.lat, loc.lon]} offset={[0, 0]}>
-                    <img
-                      src="/zamdela_round.webp"
-                      alt="DM"
-                      height={pinSize}
-                      width={pinSize}
-                      onClick={() => {
-                        defineLocation(loc);
-                      }}
-                      aria-hidden="true"
-                    />
-                  </Overlay>
-                );
-              })}
-        </Map>
+            data.map((loc) => {
+              return (
+                <Overlay key={loc.id} anchor={[loc.lat, loc.lon]} offset={[0, 0]}>
+                  <img
+                    src="/zamdela_round.webp"
+                    alt="X"
+                    height={pinSize}
+                    width={pinSize}
+                    onClick={() => {
+                      defineLocation(loc);
+                    }}
+                    aria-hidden="true"
+                  />
+                </Overlay>
+              );
+            })}
+        </PigMap>
       </div>
-      {location && <Detail props={location} open={open} closeModal={closeModal} />}
+      {point && <Detail props={point} open={open} closeModal={closeModal} />}
     </>
   );
 };

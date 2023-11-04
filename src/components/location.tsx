@@ -1,21 +1,18 @@
 import React, { FC } from 'react';
 
-import { CircleFlag } from 'react-circle-flags';
-import { location } from '../data/location';
+import { point } from '../data/point';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2';
-import '../styles/concert.css';
+// import Grid from '@mui/material/Unstable_Grid2';
+import '../styles/location.css';
 
-const Concert: FC<location> = (props) => (
+const Location: FC<point> = (props) => (
   <CardContent>
     <Typography gutterBottom variant="h4" component="div">
-      <span className="DeltaMachine2">concerto </span>
-      {/* <span className="DeMo">rs F tu</span> */}
-      <span className="DeMo">F</span>
+      <span>{props.name}</span>
     </Typography>
     <Typography sx={{ verticalAlign: 'middle' }} component="div">
-      <Grid container columnSpacing={3} rowSpacing={1}>
+      {/* <Grid container columnSpacing={3} rowSpacing={1}>
         <Grid xs={12} sm="auto">
           <span className="Dotmatrx">{props.date} </span>
         </Grid>
@@ -28,7 +25,8 @@ const Concert: FC<location> = (props) => (
             <CircleFlag countryCode={props.country.toLowerCase()} loading="lazy" className="countryBall" />
           </span>
         </Grid>
-      </Grid>
+      </Grid> */}
+      <span>{props.text}</span>
     </Typography>
     {/* 
     <span className="DeltaMachine">{props.city}</span>
@@ -52,4 +50,4 @@ const Concert: FC<location> = (props) => (
   </CardContent>
 );
 
-export default Concert;
+export default Location;

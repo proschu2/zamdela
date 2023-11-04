@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Test 1",
+    "text": "Test 1",
+    "lat": -26.85948712810109,
+    "lon": 27.89905347744243,
+    "youtube_id": "Ba3E-Ha5Efc"
+  },
+  {
+    "id": 2,
+    "name": "Test 2",
+    "text": "Test 2 text",
+    "lat": -26.84976920567952,
+    "lon": 27.876622037815817,
+    "youtube_id": "AIL_i4g4B_k"
+  },
+  {
+    "id": 3,
+    "name": "Test 3",
+    "text": "Blah Blah",
+    "lat": -26.87187318514071,
+    "lon": 27.86190350477184,
+    "youtube_id": "Iiny1GrfhYM"
+  },
+  {
+    "id": 4,
+    "name": "Test 4",
+    "text": "Lorem Ipsum here",
+    "lat": -26.81384403345485,
+    "lon": 27.821461486452783,
+    "youtube_id": "Ev-BbRIdDuE"
+  }
+]

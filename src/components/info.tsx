@@ -6,8 +6,8 @@ import Casina from './casina';
 
 const Info: FC<{ loc: location }> = ({ loc }) => {
   return (
-    <div className="redrose">
-      <Picture className="whiterose" type={loc ? loc.type : 'HOME'} concert={loc.id} />
+    <div >
+      <Picture  type={loc ? loc.type : 'HOME'} concert={loc.id} />
       {loc.type === 'CONCERT' ? <Concert {...loc} /> : <Casina />}
     </div>
   );

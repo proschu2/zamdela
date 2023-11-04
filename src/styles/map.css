@@ -1,6 +1,6 @@
 .tourDMLogo {
   width: 75%;
-  text-align: center;
+  text-align: left;
   margin: auto;
 }
 
@@ -20,17 +20,19 @@
   width: 100%;
 }
 
-.tour {
+.title {
   position: fixed;
   z-index: 1;
-  width: min(50vw, 250px);
-  left: 50%;
-  margin-left: calc(-1 * min(50vw, 250px) / 2);
+  width: min(50vw, 450px);
+  left: max(25px, 5vw);
   top: max(25px, 5vh);
-  justify-content: center;
+  justify-content: left;
   display: grid;
   height: fit-content;
   max-height: 10%;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .map {

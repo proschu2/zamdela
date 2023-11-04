@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 
 const Casina = () => (
-  <CardContent className="redrose">
+  <CardContent>
     <Typography gutterBottom variant="h4" component="div">
       <span className="DeltaMachine2">casina </span>
       {/* <span className="DeMo">rs F tu</span> */}

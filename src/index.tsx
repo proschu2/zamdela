@@ -8,15 +8,15 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import PitMap from './components/pitMap';
+import Map from './components/map';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <PitMap />,
-    children: [{ path: 'day/:id', element: <PitMap /> }],
+    element: <Map />,
+    children: [{ path: 'day/:id', element: <Map /> }],
   },
-  { path: '/:id', element: <PitMap /> },
+  { path: '/:id', element: <Map /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
