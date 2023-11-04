@@ -1,0 +1,89 @@
+@font-face {
+    font-family: Dotmatrx;
+    src: url(./Dotmatrx.ttf) format("truetype");
+}
+
+.Dotmatrx {
+    font-family: Dotmatrx;
+}
+
+@font-face {
+    font-family: DeltaMachine2;
+    src: url(./DeltaMachine2.ttf) format("truetype");
+}
+
+.DeltaMachine2 {
+    font-family: DeltaMachine2;
+}
+
+@font-face {
+    font-family: Counterfeit;
+    src: url(./Counterfeit.TTF) format("truetype");
+}
+
+.Counterfeit {
+    font-family: Counterfeit;
+}
+
+@font-face {
+    font-family: Broken;
+    src: url(./Broken.TTF) format("truetype");
+}
+
+.Broken {
+    font-family: Broken;
+}
+
+@font-face {
+    font-family: Cocogoose;
+    src: url(./Cocogoose.ttf) format("truetype");
+}
+
+.Cocogoose {
+    font-family: Cocogoose;
+}
+
+@font-face {
+    font-family: DeltaMachine;
+    src: url(./DeltaMachine.ttf) format("truetype");
+}
+
+.DeltaMachine {
+    font-family: DeltaMachine;
+}
+
+@font-face {
+    font-family: Violatio;
+    src: url(./Violatio.ttf) format("truetype");
+}
+
+.Violatio {
+    font-family: Violatio;
+}
+
+@font-face {
+    font-family: DeMo;
+    src: url(./DeMo.TTF) format("truetype");
+}
+
+.DeMo {
+    font-family: DeMo;
+}
+
+@font-face {
+    font-family: SufferWell;
+    src: url(./SufferWell.ttf) format("truetype");
+}
+
+.SufferWell {
+    font-family: SufferWell;
+}
+
+@font-face {
+    font-family: Liquidn;
+    src: url(./Liquidn.TTF) format("truetype");
+}
+
+.Liquidn {
+    font-family: Liquidn;
+}
