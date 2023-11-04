@@ -1,5 +1,5 @@
 import { location } from '../data/location';
-import data from '../data/points.json';
+import data from '../data/locations.json';
 import { point } from '../data/point';
 
 const homePics = ['coffee.webp', 'couch.webp'];
@@ -17,7 +17,7 @@ const concertPics = [
   'pit_tour11.webp',
 ];
 
-export const getDay = (id?: string): point => {
+export const getDay = (id?: string): location => {
   // id is either a date or the locarion id
   if (typeof id === 'undefined') {
     return data.filter((l) => l.date === '*')[0];
