@@ -1,0 +1,23 @@
+.title {
+  position: fixed;
+  z-index: 1;
+  max-width: 75vw;
+  left: max(25px, 5vw);
+  top: max(25px, 5vh);
+  justify-content: left;
+  display: grid;
+  height: fit-content;
+  max-height: 10%;
+  text-align: left;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    max-width: 80%;
+  }
+}
+
+.MuiTypography-root {
+  font-family: 'Poppins', sans-serif !important;
+}

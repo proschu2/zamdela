@@ -1,5 +1,4 @@
 import './index.css';
-import './fonts/fonts.css';
 
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';

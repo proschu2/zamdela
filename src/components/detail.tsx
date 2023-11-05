@@ -3,7 +3,7 @@ import Dialog from '@mui/material/Dialog';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
-import Info from './info_new';
+import Info from './info';
 import Paper from '@mui/material/Paper';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -38,12 +38,14 @@ const Detail: FC<{
       <Info pt={props} />
 
       {fullScreen && (
-        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-          <BottomNavigation onChange={closeModal}>
-            <BottomNavigationAction icon={<CloseRoundedIcon />} />
-            {/* <BottomNavigationAction label="Recents" icon={<CloseRoundedIcon color="error" />} /> */}
-          </BottomNavigation>
-        </Paper>
+        <>
+          <div style={{ marginBottom: '24px' }}></div>
+          <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+            <BottomNavigation onChange={closeModal}>
+              <BottomNavigationAction icon={<CloseRoundedIcon />} />
+            </BottomNavigation>
+          </Paper>
+        </>
       )}
     </Dialog>
   );

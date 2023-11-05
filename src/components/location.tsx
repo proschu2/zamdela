@@ -11,7 +11,7 @@ const Location: FC<point> = (props) => (
     <Typography gutterBottom variant="h4" component="div">
       <span>{props.name}</span>
     </Typography>
-    <Typography sx={{ verticalAlign: 'middle' }} component="div">
+    <Typography gutterBottom sx={{ verticalAlign: 'middle' }} component="div">
       {/* <Grid container columnSpacing={3} rowSpacing={1}>
         <Grid xs={12} sm="auto">
           <span className="Dotmatrx">{props.date} </span>
@@ -26,7 +26,7 @@ const Location: FC<point> = (props) => (
           </span>
         </Grid>
       </Grid> */}
-      <span>{props.text}</span>
+      <span dangerouslySetInnerHTML={{ __html: props.text }}></span>
     </Typography>
     {/* 
     <span className="DeltaMachine">{props.city}</span>
@@ -47,6 +47,7 @@ const Location: FC<point> = (props) => (
     </p>
     <p className="SufferWell">{props.city} SufferWell</p>
     <p className="Liquidn">{props.city} Liquidn</p> */}
+    <p></p>
   </CardContent>
 );
 

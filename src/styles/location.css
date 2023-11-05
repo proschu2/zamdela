@@ -1,20 +1,12 @@
-.countryBall {
-  height: 1rem;
-}
-
 @media screen and (max-width: 900px) {
   .MuiCardContent-root {
     padding-left: 32px !important;
     padding-right: 32px !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
   }
   .MuiTypography-h4 {
-    font-size: 3rem !important;
-  }
-  .MuiTypography-body1 {
-    font-size: 2rem !important;
-  }
-  .countryBall {
-    height: 2rem;
+    font-size: 1.6rem !important;
   }
 }
 
@@ -22,14 +14,13 @@
   .MuiCardContent-root {
     padding-left: 16px !important;
     padding-right: 16px !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
   }
   .MuiTypography-h4 {
-    font-size: 2.2rem !important;
-  }
-  .MuiTypography-body1 {
     font-size: 1.3rem !important;
   }
-  .countryBall {
-    height: 1.3rem;
+  .MuiTypography-h6 {
+    font-size: 0.8rem !important;
   }
 }

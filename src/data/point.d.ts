@@ -4,6 +4,7 @@ export interface point {
   name: string;
   lat: number;
   lon: number;
-  youtube_id: string;
+  youtube_id?: string;
+  img?: string;
   class?: string;
 }

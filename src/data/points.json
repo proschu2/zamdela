@@ -1,34 +1,33 @@
 [
   {
     "id": 1,
-    "name": "Test 1",
-    "text": "Test 1",
-    "lat": -26.85948712810109,
-    "lon": 27.89905347744243,
-    "youtube_id": "Ba3E-Ha5Efc"
+    "name": "Art Center",
+    "text": "<i>So what we do in the art center is; That we invite local artists to express themselves and practice art. This art center has been operating since around 1998. I started to find other places in town, where we could do our murals in public spaces. So these mural projects around town became a way to reach out to kids that would randomly pass by and ask us what we do. We would tell them about the art center and anybody could join to paint the mural with us. This is how we raise awareness about our work.</i><footer>&nbsp;~ Gilbert Maepa, Artist and Activist at the Art Center</footer>",
+    "lat": -26.8440323,
+    "lon": 27.8611022,
+    "img": "art_centre.webp"
   },
   {
     "id": 2,
-    "name": "Test 2",
-    "text": "Test 2 text",
-    "lat": -26.84976920567952,
-    "lon": 27.876622037815817,
-    "youtube_id": "AIL_i4g4B_k"
+    "name": "Single Distillation Unit, Sasol and Sulzer Chemtech, 1998",
+    "text": "",
+    "lat": -26.823831,
+    "lon": 27.840613,
+    "img": "sulzer.webp"
   },
   {
     "id": 3,
-    "name": "Test 3",
-    "text": "Blah Blah",
-    "lat": -26.87187318514071,
-    "lon": 27.86190350477184,
-    "youtube_id": "Iiny1GrfhYM"
+    "name": "Taxi Station",
+    "text": "",
+    "lat": -26.8120812,
+    "lon": 27.823686
   },
   {
     "id": 4,
-    "name": "Test 4",
-    "text": "Lorem Ipsum here",
-    "lat": -26.81384403345485,
-    "lon": 27.821461486452783,
-    "youtube_id": "Ev-BbRIdDuE"
+    "name": "Masterplan from Max Kirchhofer",
+    "text": "",
+    "lat": -26.8179816,
+    "lon": 27.8267087,
+    "img": "municipality.webp"
   }
 ]
