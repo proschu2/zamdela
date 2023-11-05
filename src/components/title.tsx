@@ -8,7 +8,9 @@ const Title = () => (
       SURVEY ON SASOLBURG, SOUTH AFRICA
     </Typography>
     <Typography gutterBottom variant="h6" component="div">
-      Nadina Dollie, Free Diploma with Studio NEWROPE, Chair of Architecture and Urban Transformation, ETH Zurich
+      <span>Nadina Dollie, Free Diploma with Studio NEWROPE</span>
+      <br />
+      <span>Chair of Architecture and Urban Transformation, ETH Zurich</span>
     </Typography>
   </div>
 );
